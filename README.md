@@ -14,4 +14,4 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 My stats 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=FDE-1)](https://github.com/FDE-1/github-readme-stats)
+[![FDE-1's GitHub stats](https://github-readme-stats.vercel.app/api?username=FDE-1)](https://github.com/FDE-1/github-readme-stats)
