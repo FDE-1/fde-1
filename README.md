@@ -2,13 +2,14 @@
 
 <!-- Replace YOUR_USERNAME everywhere in this file -->
 
-# Hey, I'm [Your Name] 👋
+# Hey, I'm [Fred] 👋
 
-**Aspiring Software & AI/ML Engineer** · Open to opportunities · Based in [Your City]
+**Aspiring Software & AI/ML Engineer** · Open to opportunities · Based in Paris
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_LINKEDIN)
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat&logo=vercel&logoColor=white)](https://YOUR_PORTFOLIO.dev)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:your@email.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/frederic-dong/)
+<!--
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat&logo=vercel&logoColor=white)](https://YOUR[_PORTFOLIO.dev)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:your@email.com)](url) -->
 
 </div>
 
@@ -22,7 +23,7 @@ I'm a developer focused on building things at the intersection of **software eng
 - 🌱 Learning: system design, MLOps, and Kubernetes
 - 🎯 Goal: land a role as a Software Developer, AI/ML Engineer, or Systems Architect
 - 💬 Ask me about: Python, system design trade-offs, or getting into AI engineering
-- ⚡ Fun fact: [something memorable about you]
+<!-- - ⚡ Fun fact: [something memorable about you] -->
 
 ---
 
@@ -57,7 +58,7 @@ I'm a developer focused on building things at the intersection of **software eng
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)
 
 ---
-
+<!--
 ## Projects
 
 | Project | Description | Stack |
@@ -68,7 +69,7 @@ I'm a developer focused on building things at the intersection of **software eng
 | 🤖 [Image Classifier API](https://github.com/YOUR_USERNAME/image-classifier) | Fine-tuned EfficientNet with REST API, live on HuggingFace Spaces | PyTorch · Gradio · fastai |
 
 ---
-
+-->
 ## GitHub stats
 
 <div align="center">
@@ -87,9 +88,6 @@ I'm a developer focused on building things at the intersection of **software eng
 <img src="https://streak-stats.demolab.com?user=YOUR_USERNAME&theme=default&hide_border=true" alt="GitHub streak" />
 
 </div>
-
-> **Note:** Stats are fetched live by [github-readme-stats](https://github.com/anuraghazra/github-readme-stats).
-> If the cards don't load, you can [self-host the instance](https://github.com/anuraghazra/github-readme-stats#deploy-on-your-own) or use the [Vercel deploy button](https://github.com/anuraghazra/github-readme-stats#deploy-on-your-own).
 
 ---
 
