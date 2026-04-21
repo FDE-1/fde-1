@@ -2,7 +2,7 @@
 
 <!-- Replace YOUR_USERNAME everywhere in this file -->
 
-# Hey, I'm [Fred] 👋
+# Hey, I'm Fred 👋
 
 **Aspiring Software & AI/ML Engineer** · Open to opportunities · Based in Paris
 
