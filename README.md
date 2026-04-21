@@ -26,6 +26,14 @@ I'm a developer focused on building things at the intersection of **software eng
 <!-- - ⚡ Fun fact: [something memorable about you] -->
 
 ---
+## My Contributions
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/FDE-1/FDE-1/output/pacman-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/FDE-1/FDE-1/output/pacman-light.svg" />
+  <img alt="pacman contribution graph" />
+</picture>
+
+---
 
 ## Tech stack
 
@@ -72,20 +80,33 @@ I'm a developer focused on building things at the intersection of **software eng
 -->
 ## GitHub stats
 
+
 <div align="center">
 
 <!-- Main stats card -->
-<img src="https://github-readme-stats.vercel.app/api?username=FDE-1&show_icons=true&theme=default&hide_border=true&count_private=true&include_all_commits=true" height="165" alt="GitHub stats" />
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="https://github-readme-stats.vercel.app/api?username=FDE-1&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true" height="165" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=FDE-1&show_icons=true&theme=default&hide_border=true&count_private=true&include_all_commits=true" height="165" />
+  <img height="165" alt="GitHub stats" />
+</picture>
 
 <!-- Top languages -->
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=FDE-1&layout=compact&theme=default&hide_border=true&langs_count=6" height="165" alt="Top languages" />
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=FDE-1&layout=compact&theme=github_dark&hide_border=true&langs_count=6" height="165" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=FDE-1&layout=compact&theme=default&hide_border=true&langs_count=6" height="165" />
+  <img height="165" alt="Top languages" />
+</picture>
 
 </div>
 
 <div align="center">
 
 <!-- Contribution streak -->
-<img src="https://streak-stats.demolab.com?user=FDE-1&theme=default&hide_border=true" alt="GitHub streak" />
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="https://streak-stats.demolab.com?user=FDE-1&theme=github-dark-blue&hide_border=true" />
+  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=FDE-1&theme=default&hide_border=true" />
+  <img alt="GitHub streak" />
+</picture>
 
 </div>
 
