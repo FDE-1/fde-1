@@ -108,6 +108,12 @@ I'm a developer focused on building things at the intersection of **software eng
   <img alt="GitHub streak" />
 </picture>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="https://leetcard.jacoblin.cool/FDE-1?theme=dark&ext=heatmap" />
+  <source media="(prefers-color-scheme: light)" srcset="https://leetcard.jacoblin.cool/FDE-1?theme=light&ext=heatmap" />
+  <img alt="LeetCode stats" />
+</picture>
+
 </div>
 
 ---
