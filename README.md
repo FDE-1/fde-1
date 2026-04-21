@@ -4,7 +4,7 @@
 
 # Hey, I'm Fred 👋
 
-**Aspiring Software & AI/ML Engineer** · Open to opportunities · Based in Paris
+**Software & AI/ML Engineer** · Open to opportunities · Based in Paris
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/frederic-dong)
 <!--
