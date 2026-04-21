@@ -114,14 +114,8 @@ I'm a developer focused on building things at the intersection of **software eng
 
 ## Recent activity
 
+
 <!--START_SECTION:activity-->
-<!-- This section is auto-updated every 24h by the GitHub Action in .github/workflows/update-readme.yml -->
-<!-- After your first push, it will look something like this:
-1. 🎉 Merged PR [#12](https://github.com/YOUR_USERNAME/rag-chatbot/pull/12) in YOUR_USERNAME/rag-chatbot
-2. 💪 Opened PR [#11](https://github.com/YOUR_USERNAME/rag-chatbot/pull/11) in YOUR_USERNAME/rag-chatbot
-3. 🗣 Commented on [#5](https://github.com/YOUR_USERNAME/rate-limiter/issues/5) in YOUR_USERNAME/rate-limiter
-4. ⭐ Starred anuraghazra/github-readme-stats
--->
 <!--END_SECTION:activity-->
 
 > Powered by [github-activity-readme](https://github.com/marketplace/actions/github-activity-readme). Updates automatically every 24 hours.
