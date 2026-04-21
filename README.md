@@ -75,17 +75,17 @@ I'm a developer focused on building things at the intersection of **software eng
 <div align="center">
 
 <!-- Main stats card -->
-<img src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=default&hide_border=true&count_private=true&include_all_commits=true" height="165" alt="GitHub stats" />
+<img src="https://github-readme-stats.vercel.app/api?username=FDE-1&show_icons=true&theme=default&hide_border=true&count_private=true&include_all_commits=true" height="165" alt="GitHub stats" />
 
 <!-- Top languages -->
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=default&hide_border=true&langs_count=6" height="165" alt="Top languages" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=FDE-1&layout=compact&theme=default&hide_border=true&langs_count=6" height="165" alt="Top languages" />
 
 </div>
 
 <div align="center">
 
 <!-- Contribution streak -->
-<img src="https://streak-stats.demolab.com?user=YOUR_USERNAME&theme=default&hide_border=true" alt="GitHub streak" />
+<img src="https://streak-stats.demolab.com?user=FDE-1&theme=default&hide_border=true" alt="GitHub streak" />
 
 </div>
 
