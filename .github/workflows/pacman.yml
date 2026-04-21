@@ -18,6 +18,7 @@ jobs:
       - name: Generate Pac-Man SVG
         run: |
           npm install -g pacman-contribution-graph
+          mkdir -p dist
           pacman-contribution-graph --username FDE-1 --platform github --gameTheme github --output dist/pacman-light.svg
           pacman-contribution-graph --username FDE-1 --platform github --gameTheme github-dark --output dist/pacman-dark.svg
 
