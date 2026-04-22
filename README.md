@@ -4,9 +4,9 @@
 
 # Hey, I'm Fred 👋
 
-**Aspiring Software & AI/ML Engineer** · Open to opportunities · Based in Paris
+**Software & AI/ML Engineer** · Open to opportunities · Based in Paris
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/frederic-dong/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/frederic-dong)
 <!--
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat&logo=vercel&logoColor=white)](https://YOUR[_PORTFOLIO.dev)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:your@email.com)](url) -->
@@ -108,6 +108,12 @@ I'm a developer focused on building things at the intersection of **software eng
   <img alt="GitHub streak" />
 </picture>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="https://leetcard.jacoblin.cool/FDE-1?theme=dark&ext=heatmap" />
+  <source media="(prefers-color-scheme: light)" srcset="https://leetcard.jacoblin.cool/FDE-1?theme=light&ext=heatmap" />
+  <img alt="LeetCode stats" />
+</picture>
+
 </div>
 
 ---
@@ -135,8 +141,8 @@ I'm a developer focused on building things at the intersection of **software eng
 
 **Open to full-time roles, contract work, and interesting problems.**
 
-[![LinkedIn](https://img.shields.io/badge/Let's_connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_LINKEDIN)
+[![LinkedIn](https://img.shields.io/badge/Let's_connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/frederic-dong)
 
-![Profile views](https://komarev.com/ghpvc/?username=YOUR_USERNAME&style=flat&color=blue)
+![Profile views](https://komarev.com/ghpvc/?username=FDE-1&style=flat&color=blue)
 
 </div>
