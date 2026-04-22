@@ -120,11 +120,10 @@ I'm a developer focused on building things at the intersection of **software eng
 
 ## Recent activity
 
+<!--RECENT_ACTIVITY:start-->
+<!--RECENT_ACTIVITY:end-->
 
-<!--START_SECTION:activity-->
-<!--END_SECTION:activity-->
-
-> Powered by [github-activity-readme](https://github.com/marketplace/actions/github-activity-readme). Updates automatically every 24 hours.
+> Powered by [recent-activity](https://github.com/Readme-Workflows/recent-activity). Updates every 6 hours.
 
 ---
 

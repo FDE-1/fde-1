@@ -15,12 +15,17 @@ jobs:
     steps:
       - name: Checkout repo              # ← this MUST come first
         uses: actions/checkout@v4
-
-      - name: GitHub Activity Readme
-        uses: jamesgeorge007/github-activity-readme@master
+        
+      - name: Recent Activity
+        uses: Readme-Workflows/recent-activity@v2.4.0
+        
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          COMMIT_MSG: "chore: update README with recent activity"
-          MAX_LINES: 5
+      # - name: GitHub Activity Readme
+      #   uses: jamesgeorge007/github-activity-readme@master
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     COMMIT_MSG: "chore: update README with recent activity"
+      #     MAX_LINES: 5
           # TARGET_FILE defaults to README.md — only add this if yours is named differently
