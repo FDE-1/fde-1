@@ -9,6 +9,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     name: Update activity section
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repo              # ← this MUST come first
