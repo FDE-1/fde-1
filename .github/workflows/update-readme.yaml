@@ -13,7 +13,7 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout repo              # ← this MUST come first
+      - name: Checkout repo             
         uses: actions/checkout@v4
         
       - name: Recent Activity
@@ -21,11 +21,6 @@ jobs:
         
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      # - name: GitHub Activity Readme
-      #   uses: jamesgeorge007/github-activity-readme@master
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   with:
-      #     COMMIT_MSG: "chore: update README with recent activity"
-      #     MAX_LINES: 5
-          # TARGET_FILE defaults to README.md — only add this if yours is named differently
+
+        with:
+          CONFIG_FILE: .github/recent-activity.config.yml 
