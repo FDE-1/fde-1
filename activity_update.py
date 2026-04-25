@@ -20,7 +20,7 @@ from datetime import datetime, timezone
 
 # ── Config ────────────────────────────────────────────────────────────────────
 GITHUB_TOKEN    = os.environ.get("GH_TOKEN", "")
-GITHUB_USERNAME = os.environ.get("USERNAME", "")
+GITHUB_USERNAME = os.environ.get("GIHUB_USERNAME", "")
 README_PATH     = os.environ.get("README_PATH", "README.md")
 MAX_EVENTS      = int(os.environ.get("MAX_EVENTS", "5"))
 
