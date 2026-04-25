@@ -15,6 +15,7 @@ jobs:
   update-readme:
     name: Fetch activity and patch README
     runs-on: ubuntu-latest
+    environment: GH_TOKEN
 
     steps:
       - name: Checkout profile repo
