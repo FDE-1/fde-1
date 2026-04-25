@@ -1,21 +1,50 @@
-name: Update README activity
+name: Update README with latest GitHub activity
 
 on:
   schedule:
+    # Runs every 6 hours  (cron UTC)
     - cron: "0 */6 * * *"
-  workflow_dispatch:
+  workflow_dispatch:        # allows manual trigger from the Actions tab
+  push:
+    branches: [main]        # also runs on push so you can test immediately
+
+permissions:
+  contents: write           # needed to commit back to the repo
 
 jobs:
-  build:
+  update-readme:
+    name: Fetch activity and patch README
     runs-on: ubuntu-latest
-    name: Update activity section
-    permissions:
-      contents: write
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout profile repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}
 
-      - name: Recent Activity
-        uses: Readme-Workflows/recent-activity@v2.4.0
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      # ── 3. (Optional) install deps — the script uses stdlib only
+      # - name: Install dependencies
+      #   run: pip install -r requirements.txt
+
+      - name: Run fetch_activity.py
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN:        ${{ secrets.GH_TOKEN }}
+          GITHUB_USERNAME: ${{ vars.GITHUB_USERNAME }}  
+          README_PATH:     README.md
+          MAX_EVENTS:      "5"
+        run: python fetch_activity.py
+
+      - name: Commit updated README
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          # Only commit when there's actually a change
+          git diff --cached --quiet || git commit -m "chore: update GitHub activity [skip ci]"
+          git push
