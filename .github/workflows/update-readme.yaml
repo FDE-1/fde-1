@@ -29,13 +29,13 @@ jobs:
       # - name: Install dependencies
       #   run: pip install -r requirements.txt
 
-      - name: Run fetch_activity.py
+      - name: Run activity_update.py
         env:
           GH_TOKEN:        ${{ secrets.GH_TOKEN }}
           GITHUB_USERNAME: ${{ vars.GITHUB_USERNAME }}  
           README_PATH:     README.md
           MAX_EVENTS:      "5"
-        run: python fetch_activity.py
+        run: python activity_update.py
 
       - name: Commit updated README
         run: |
