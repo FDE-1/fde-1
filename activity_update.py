@@ -3,6 +3,8 @@
 fetch_activity.py
 Fetches the latest 5 GitHub activities for a user and updates their README.md
 between <!--START_SECTION:activity--> and <!--END_SECTION:activity--> markers.
+Also cache-busts all <source srcset="..."> URLs in <picture> blocks so GitHub's
+CDN proxy is forced to re-fetch streak/LeetCode cards on every run.
 
 Supported event types:
   PushEvent, PullRequestEvent, PullRequestReviewEvent,
@@ -176,6 +178,28 @@ FORMATTERS = {
     "MemberEvent":            fmt_member,
 }
 
+# ── Cache-busting ─────────────────────────────────────────────────────────────
+
+def bust_picture_cache(content: str, timestamp: str) -> str:
+    """
+    Append/replace ?t=TIMESTAMP (or &t=TIMESTAMP) on every srcset URL inside
+    a <source> tag, so GitHub's camo CDN is forced to re-fetch the image.
+
+    Handles both forms:
+      srcset="https://example.com/img?foo=bar"   →  ...?foo=bar&t=20250425120000
+      srcset="https://example.com/img"           →  ...?t=20250425120000
+    """
+    def replace_srcset(m: re.Match) -> str:
+        url = m.group(1)
+        # Strip any existing &t=... or ?t=... cache-buster
+        url = re.sub(r'[&?]t=\d+', '', url)
+        # Append the new one
+        sep = '&' if '?' in url else '?'
+        return f'srcset="{url}{sep}t={timestamp}"'
+
+    return re.sub(r'srcset="([^"]+)"', replace_srcset, content)
+
+
 # ── Core logic ────────────────────────────────────────────────────────────────
 
 def fetch_events(username: str, limit: int = 5) -> list[str]:
@@ -192,7 +216,6 @@ def fetch_events(username: str, limit: int = 5) -> list[str]:
         try:
             text  = fmt(event)
             emoji = EMOJI.get(etype, "🔹")
-            # Parse timestamp
             ts    = event.get("created_at", "")
             try:
                 dt   = datetime.strptime(ts, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
@@ -211,7 +234,11 @@ def fetch_events(username: str, limit: int = 5) -> list[str]:
 
 
 def update_readme(lines: list[str], path: str) -> bool:
-    """Inject activity lines into README between markers. Returns True if changed."""
+    """
+    1. Inject activity lines between the section markers.
+    2. Cache-bust all <source srcset="..."> URLs.
+    Returns True if the file was changed.
+    """
     try:
         with open(path, "r", encoding="utf-8") as f:
             content = f.read()
@@ -229,6 +256,7 @@ def update_readme(lines: list[str], path: str) -> bool:
         )
         sys.exit(1)
 
+    # ── 1. Update activity section ────────────────────────────────────────────
     new_block = (
         START_MARKER
         + "\n\n"
@@ -236,9 +264,15 @@ def update_readme(lines: list[str], path: str) -> bool:
         + "\n\n"
         + END_MARKER
     )
-
-    pattern  = re.escape(START_MARKER) + r".*?" + re.escape(END_MARKER)
+    pattern     = re.escape(START_MARKER) + r".*?" + re.escape(END_MARKER)
     new_content = re.sub(pattern, new_block, content, flags=re.DOTALL)
+
+    # ── 2. Cache-bust <source srcset="..."> URLs ──────────────────────────────
+    timestamp   = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
+    new_content = bust_picture_cache(new_content, timestamp)
+    busted      = new_content.count(f"t={timestamp}")
+    if busted:
+        print(f"[INFO] Cache-busted {busted} srcset URL(s) with t={timestamp}.")
 
     if new_content == content:
         print("[INFO] README already up-to-date. No changes written.")
