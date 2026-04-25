@@ -129,17 +129,6 @@ I'm a developer focused on building things at the intersection of **software eng
 1. 📦 Pushed 0 commits to `FDE-1/fde-1:main` — _(no commits)_ — `Apr 25, 2026`
 
 <!--END_SECTION:activity-->
-
-<!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [FDE-1/fde-1](https://github.com/FDE-1/fde-1)
-2. ⬆️ Pushed undefined commit(s) to [FDE-1/fde-1](https://github.com/FDE-1/fde-1)
-3. ⬆️ Pushed undefined commit(s) to [FDE-1/fde-1](https://github.com/FDE-1/fde-1)
-4. ⬆️ Pushed undefined commit(s) to [FDE-1/fde-1](https://github.com/FDE-1/fde-1)
-5. ⬆️ Pushed undefined commit(s) to [FDE-1/fde-1](https://github.com/FDE-1/fde-1)
-<!--RECENT_ACTIVITY:end-->
-
-> Powered by [recent-activity](https://github.com/Readme-Workflows/recent-activity). Updates every 6 hours.
-
 ---
 
 ## Currently studying
