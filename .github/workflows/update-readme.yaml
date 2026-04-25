@@ -32,7 +32,7 @@ jobs:
       - name: Run activity_update.py
         env:
           GH_TOKEN:        ${{ secrets.GH_TOKEN }}
-          GITHUB_USERNAME: ${{ vars.GITHUB_USERNAME }}  
+          USERNAME: ${{ vars.USERNAME }}  
           README_PATH:     README.md
           MAX_EVENTS:      "5"
         run: python activity_update.py
