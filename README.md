@@ -28,9 +28,10 @@ I'm a developer focused on building things at the intersection of **software eng
 ---
 ## My Contributions
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/FDE-1/FDE-1/output/pacman-dark.svg?t=20260707033809" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/FDE-1/FDE-1/output/pacman-light.svg?t=20260707033809" />
-  <img alt="pacman contribution graph" />
+  <source media="(prefers-color-scheme: dark)"
+          srcset="https://raw.githubusercontent.com/FDE-1/pacman-eats-everything/output/pacman-dark.svg">
+  <img alt="Pac-Man contribution graph"
+       src="https://raw.githubusercontent.com/FDE-1/pacman-eats-everything/output/pacman-light.svg">
 </picture>
 
 ---
