@@ -29,9 +29,9 @@ I'm a developer focused on building things at the intersection of **software eng
 ## My Contributions
 <picture>
   <source media="(prefers-color-scheme: dark)"
-          srcset="https://raw.githubusercontent.com/FDE-1/pacman-eats-everything/output/pacman-dark.svg?t=20260707102418">
+          srcset="https://raw.githubusercontent.com/FDE-1/pacman-github/output/pacman-dark.svg?t=20260707102418">
   <img alt="Pac-Man contribution graph"
-       src="https://raw.githubusercontent.com/FDE-1/pacman-eats-everything/output/pacman-light.svg">
+       src="https://raw.githubusercontent.com/FDE-1/pacman-github/output/pacman-light.svg">
 </picture>
 
 ---
