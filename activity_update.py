@@ -29,6 +29,11 @@ MAX_EVENTS      = int(os.environ.get("MAX_EVENTS", "5"))
 START_MARKER = "<!--START_SECTION:activity-->"
 END_MARKER   = "<!--END_SECTION:activity-->"
 
+# All-zero SHA = branch/tag creation or deletion (no diff to compare).
+ZERO_SHA = "0" * 40
+# Self-referential commits produced by this very workflow — never show them.
+BOT_COMMIT_RE = re.compile(r"update GitHub activity|\[skip ci\]", re.IGNORECASE)
+
 EMOJI = {
     "PushEvent":              "📦",
     "PullRequestEvent":       "🔀",
@@ -45,8 +50,12 @@ EMOJI = {
 
 # ── GitHub API helpers ────────────────────────────────────────────────────────
 
-def gh_get(url: str) -> dict | list:
-    """Make an authenticated GET request to the GitHub API."""
+def gh_get(url: str, allow_fail: bool = False):
+    """Make an authenticated GET request to the GitHub API.
+
+    When allow_fail is True, transient/HTTP errors return None instead of
+    aborting the whole run (used for best-effort commit enrichment).
+    """
     req = urllib.request.Request(url)
     req.add_header("Accept", "application/vnd.github+json")
     req.add_header("X-GitHub-Api-Version", "2022-11-28")
@@ -57,22 +66,65 @@ def gh_get(url: str) -> dict | list:
         with urllib.request.urlopen(req, timeout=15) as resp:
             return json.loads(resp.read().decode())
     except urllib.error.HTTPError as e:
+        if allow_fail:
+            print(f"[WARN] HTTP {e.code} fetching {url}: {e.reason}", file=sys.stderr)
+            return None
         print(f"[ERROR] HTTP {e.code} fetching {url}: {e.reason}", file=sys.stderr)
         sys.exit(1)
     except urllib.error.URLError as e:
+        if allow_fail:
+            print(f"[WARN] Network error fetching {url}: {e.reason}", file=sys.stderr)
+            return None
         print(f"[ERROR] Network error fetching {url}: {e.reason}", file=sys.stderr)
         sys.exit(1)
 
 
+# Cache compare results so repeated (repo, before, head) tuples cost one call.
+_compare_cache: dict[tuple[str, str, str], list[str] | None] = {}
+
+
+def commits_between(repo: str, before: str, head: str) -> list[str] | None:
+    """Return subject lines of commits in before..head, or None if unavailable.
+
+    GitHub's public /users/{u}/events endpoint returns a *stripped* PushEvent
+    payload for some accounts (no `commits`, no `size`). The compare API
+    reconstructs the real commit list from the `before`/`head` SHAs.
+    """
+    if not before or not head or before == ZERO_SHA:
+        return None
+    key = (repo, before, head)
+    if key in _compare_cache:
+        return _compare_cache[key]
+    url  = f"https://api.github.com/repos/{repo}/compare/{before}...{head}"
+    data = gh_get(url, allow_fail=True)
+    msgs = None
+    if isinstance(data, dict):
+        msgs = [c["commit"]["message"].split("\n")[0] for c in data.get("commits", [])]
+    _compare_cache[key] = msgs
+    return msgs
+
+
 # ── Event formatters ──────────────────────────────────────────────────────────
 
-def fmt_push(event: dict) -> str:
+def fmt_push(event: dict) -> str | None:
     payload  = event["payload"]
     repo     = event["repo"]["name"]
     branch   = payload.get("ref", "refs/heads/main").split("/")[-1]
-    commits  = payload.get("commits", [])
-    n        = len(commits)
-    msg      = commits[-1]["message"].split("\n")[0][:72] if commits else "(no commits)"
+
+    # Prefer inline commits; fall back to compare API for stripped payloads.
+    msgs = [c["message"].split("\n")[0] for c in payload.get("commits", [])]
+    if not msgs:
+        enriched = commits_between(repo, payload.get("before"), payload.get("head"))
+        if enriched is not None:
+            msgs = enriched
+
+    # Drop this workflow's own README-update commits.
+    msgs = [m for m in msgs if not BOT_COMMIT_RE.search(m)]
+    if not msgs:
+        return None  # nothing meaningful left → skip this event
+
+    n   = len(msgs)
+    msg = msgs[-1][:72]
     return f'Pushed {n} commit{"s" if n != 1 else ""} to `{repo}:{branch}` — _{msg}_'
 
 
@@ -215,6 +267,8 @@ def fetch_events(username: str, limit: int = 5) -> list[str]:
             continue
         try:
             text  = fmt(event)
+            if text is None:
+                continue  # formatter chose to skip (e.g. bot-only push)
             emoji = EMOJI.get(etype, "🔹")
             ts    = event.get("created_at", "")
             try:
