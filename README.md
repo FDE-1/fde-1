@@ -17,13 +17,11 @@ Software & AI/ML Engineer · EPITA 2026 · Python, FastAPI, LLM agents · Brusse
 
 ## About me
 
-I'm a developer focused on building things at the intersection of **software engineering** and **AI/ML** — from distributed systems to LLM-powered applications. Currently looking for my first professional role while shipping real projects to sharpen my skills.
+Currently interning at AMA European Consulting (Brussels), building Python systems in production. I work at the intersection of backend engineering and LLM applications — from compilers to agentic pipelines.
 
-- 🔭 Currently working on: an end-to-end RAG pipeline and a distributed rate limiter
-- 🌱 Learning: system design, MLOps, and Kubernetes
-- 🎯 Goal: land a role as a Software Developer, AI/ML Engineer, or Systems Architect
-- 💬 Ask me about: Python, system design trade-offs, or getting into AI engineering
-<!-- - ⚡ Fun fact: [something memorable about you] -->
+🔭 Building: langgraph-research-agent — a multi-step research agent with LangGraph
+🎯 Looking for: Software Engineer / AI/ML Engineer roles, starting late 2026
+💬 Ask me about: Python, LLM agents, compilers
 
 ---
 ## My Contributions
