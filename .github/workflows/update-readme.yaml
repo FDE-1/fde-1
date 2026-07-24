@@ -2,11 +2,12 @@ name: Update README with latest GitHub activity
 
 on:
   schedule:
-    # Runs every 6 hours  (cron UTC)
+    # Runs every 12 hours (cron UTC)
     - cron: "0 */12 * * *"
-  workflow_dispatch:       
-  push:
-    branches: [main]        
+  workflow_dispatch:
+  # No `push` trigger: it created a self-referential loop where each README
+  # commit re-ran the job. Schedule + manual dispatch keep activity fresh
+  # without the bot spamming its own feed.
 
 permissions:
   contents: write           
