@@ -60,7 +60,7 @@ Currently interning at AMA European Consulting (Brussels), building Python syste
 
 ---
 -->
-## GitHub stats
+## GitHub stats & LeetCode stats
 
 
 <div align="center">
@@ -111,15 +111,6 @@ Currently interning at AMA European Consulting (Brussels), building Python syste
 1. 📦 Pushed 1 commit to `FDE-1/fde-1:main` — _Revise personal introduction in README_ — `Jul 24, 2026`
 
 <!--END_SECTION:activity-->
----
-
-## Currently studying
-
-- 📐 System design (DDIA book + ByteByteGo)
-- ☸️ Kubernetes & cloud architecture (AWS SAA)
-- 🤗 LLM fine-tuning & RAG pipelines
-- 🧪 MLOps with MLflow + Evidently AI
-
 ---
 
 <div align="center">
