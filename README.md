@@ -27,7 +27,7 @@ Currently interning at AMA European Consulting (Brussels), building Python syste
 ## My Contributions
 <picture>
   <source media="(prefers-color-scheme: dark)"
-          srcset="https://raw.githubusercontent.com/FDE-1/pacman-github/output/pacman-dark.svg?t=20260724092240">
+          srcset="https://raw.githubusercontent.com/FDE-1/pacman-github/output/pacman-dark.svg?t=20260724134844">
   <img alt="Pac-Man contribution graph"
        src="https://raw.githubusercontent.com/FDE-1/pacman-github/output/pacman-light.svg">
 </picture>
@@ -67,15 +67,15 @@ Currently interning at AMA European Consulting (Brussels), building Python syste
 
 <!-- Main stats card -->
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="https://github-readme-stats.vercel.app/api?username=FDE-1&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&t=20260724092240" height="165" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=FDE-1&show_icons=true&theme=default&hide_border=true&count_private=true&include_all_commits=true&t=20260724092240" height="165" />
+  <source media="(prefers-color-scheme: dark)"  srcset="https://github-readme-stats.vercel.app/api?username=FDE-1&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&t=20260724134844" height="165" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=FDE-1&show_icons=true&theme=default&hide_border=true&count_private=true&include_all_commits=true&t=20260724134844" height="165" />
   <img height="165" alt="GitHub stats" />
 </picture>
 
 <!-- Top languages -->
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=FDE-1&layout=compact&theme=github_dark&hide_border=true&langs_count=6&t=20260724092240" height="165" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=FDE-1&layout=compact&theme=default&hide_border=true&langs_count=6&t=20260724092240" height="165" />
+  <source media="(prefers-color-scheme: dark)"  srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=FDE-1&layout=compact&theme=github_dark&hide_border=true&langs_count=6&t=20260724134844" height="165" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=FDE-1&layout=compact&theme=default&hide_border=true&langs_count=6&t=20260724134844" height="165" />
   <img height="165" alt="Top languages" />
 </picture>
 
@@ -85,14 +85,14 @@ Currently interning at AMA European Consulting (Brussels), building Python syste
 
 <!-- Contribution streak -->
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="https://streak-stats.demolab.com?user=FDE-1&theme=github-dark-blue&hide_border=true&t=20260724092240" />
-  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=FDE-1&theme=default&hide_border=true&t=20260724092240" />
+  <source media="(prefers-color-scheme: dark)"  srcset="https://streak-stats.demolab.com?user=FDE-1&theme=github-dark-blue&hide_border=true&t=20260724134844" />
+  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=FDE-1&theme=default&hide_border=true&t=20260724134844" />
   <img alt="GitHub streak" />
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="https://leetcard.jacoblin.cool/FDE-1?theme=dark&ext=heatmap&t=20260724092240" />
-  <source media="(prefers-color-scheme: light)" srcset="https://leetcard.jacoblin.cool/FDE-1?theme=light&ext=heatmap&t=20260724092240" />
+  <source media="(prefers-color-scheme: dark)"  srcset="https://leetcard.jacoblin.cool/FDE-1?theme=dark&ext=heatmap&t=20260724134844" />
+  <source media="(prefers-color-scheme: light)" srcset="https://leetcard.jacoblin.cool/FDE-1?theme=light&ext=heatmap&t=20260724134844" />
   <img alt="LeetCode stats" />
 </picture>
 
@@ -104,11 +104,11 @@ Currently interning at AMA European Consulting (Brussels), building Python syste
 
 <!--START_SECTION:activity-->
 
+1. 📦 Pushed 1 commit to `FDE-1/fde-1:main` — _:fix: Modify README for GitHub and LeetCode stats_ — `Jul 24, 2026`
 1. 📦 Pushed 1 commit to `FDE-1/fde-1:main` — _:feat: change the activy updater to work with live API_ — `Jul 24, 2026`
 1. 📦 Pushed 1 commit to `FDE-1/fde-1:main` — _:feat: change to the update readme_ — `Jul 24, 2026`
 1. 📦 Pushed 1 commit to `FDE-1/fde-1:main` — _Revise tech stack in README.md_ — `Jul 24, 2026`
 1. 📦 Pushed 1 commit to `FDE-1/fde-1:main` — _Revise personal details and project focus in README_ — `Jul 24, 2026`
-1. 📦 Pushed 1 commit to `FDE-1/fde-1:main` — _Revise personal introduction in README_ — `Jul 24, 2026`
 
 <!--END_SECTION:activity-->
 ---
