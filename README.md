@@ -100,19 +100,6 @@ Currently interning at AMA European Consulting (Brussels), building Python syste
 
 ---
 
-## Recent activity
-
-<!--START_SECTION:activity-->
-
-1. 📦 Pushed 1 commit to `FDE-1/Tiger-Compiler:main` — _:feat: added readme and demo_ — `Jul 27, 2026`
-1. 📦 Pushed 1 commit to `FDE-1/fde-1:main` — _:fix: Modify README for GitHub and LeetCode stats_ — `Jul 24, 2026`
-1. 📦 Pushed 1 commit to `FDE-1/fde-1:main` — _:feat: change the activy updater to work with live API_ — `Jul 24, 2026`
-1. 📦 Pushed 1 commit to `FDE-1/fde-1:main` — _:feat: change to the update readme_ — `Jul 24, 2026`
-1. 📦 Pushed 1 commit to `FDE-1/fde-1:main` — _Revise tech stack in README.md_ — `Jul 24, 2026`
-
-<!--END_SECTION:activity-->
----
-
 <div align="center">
 
 **Open to full-time roles, contract work, and interesting problems.**
